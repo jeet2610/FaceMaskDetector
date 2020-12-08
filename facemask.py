@@ -11,7 +11,7 @@ import keras
 import keras.backend as k
 from keras.layers import Conv2D,MaxPooling2D,SpatialDropout2D,Flatten,Dropout,Dense
 from keras.models import Sequential,load_model
-from keras.optimizers import adam
+from keras.optimizers import Adam
 from keras.preprocessing import image
 import cv2
 import datetime
@@ -32,7 +32,7 @@ model.add(Flatten())
 model.add(Dense(100,activation='relu'))
 model.add(Dense(1,activation='sigmoid'))
 
-model.compile(optimizer='adam',loss='binary_crossentropy',metrics=['accuracy'])
+model.compile(optimizer='Adam',loss='binary_crossentropy',metrics=['accuracy'])
 
 from keras.preprocessing.image import ImageDataGenerator
 train_datagen = ImageDataGenerator(
